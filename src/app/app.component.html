@@ -1,0 +1,319 @@
+<!--<app-organization-sd
+  [agency]="undefined"
+>
+</app-organization-sd>-->
+
+<div
+  [ngClass]="{'white-theme': isTop}"
+>
+  <app-menu-container
+    [links]="links"
+    [currentRoute]="currentRoute"
+  >
+  </app-menu-container>
+</div>
+
+<router-outlet></router-outlet>
+
+<div id="home"></div>
+
+<div
+  class="menu-background"
+  #nav
+>
+</div>
+
+<section
+  class="header-container"
+>
+  <div
+    class="background"
+    style="background-image: url('assets/images/header_background.jpg')"
+  >
+  </div>
+  <img
+    #logo
+    (window:scroll)="onScroll()"
+    src="/assets/icons/logo.svg"
+    alt=""
+    class="logo"
+  >
+  <div
+    class="title-container"
+  >
+    <h2>
+      PURPLE ROOM
+    </h2>
+    <h3>
+      studio
+    </h3>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="start end"
+      class="container promo"
+    >
+      <p
+        [innerHTML]="'header_info' | translate"
+      >
+      </p>
+    </div>
+  </div>
+</section>
+
+<div id="about"></div>
+
+<section
+  fxLayout="column"
+  fxLayoutAlign="center start"
+  class="divider"
+  style="background-image: url('assets/images/header_background.jpg')"
+>
+  <h2
+    class="container"
+  >
+    {{ 'dividers.1.title' | translate }}
+  </h2>
+  <p
+    class="container"
+    [innerHTML]="'dividers.1.content' | translate"
+  >
+  </p>
+</section>
+
+<section
+  fxLayout="column"
+  fxLayoutAlign.gt-sm="center start"
+  class="container services-container"
+>
+  <h2
+    [innerHTML]="'services.title' | translate"
+  >
+  </h2>
+  <p
+    [innerHTML]="'services.content' | translate"
+  >
+  </p>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    fxLayoutAlign.gt-xs="space-between center"
+    class="services-list"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-sm="start center"
+      *ngFor="let item of ['1', '2', '3', '4']"
+      class="service"
+    >
+      <img
+        [src]="'services.' + item + '.image_url' | translate"
+        alt=""
+        class="image"
+      >
+      <h4
+        class="title"
+      >
+        {{ 'services.' + item + '.title' | translate }}
+      </h4>
+      <p>
+        {{ 'services.' + item + '.content' | translate }}
+      </p>
+      <a
+        [href]="'services.' + item + '.link_url' | translate"
+        mat-raised-button
+        color="main-color"
+        class="link"
+      >
+        {{ 'services.' + item + '.link_text' | translate }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="divider centered"
+  style="background-image: url('assets/images/header_background.jpg')"
+>
+  <h2
+    class="container"
+  >
+    {{ 'dividers.2.title' | translate }}
+  </h2>
+  <p
+    class="container"
+    [innerHTML]="'dividers.2.content' | translate"
+  >
+  </p>
+</section>
+
+<section
+  class="container"
+>
+  <h2
+    [innerHTML]="'projects.title' | translate"
+  >
+  </h2>
+  <p
+    [innerHTML]="'projects.content' | translate"
+  >
+  </p>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    fxLayoutAlign.gt-xs="space-between center"
+    class="portfolio"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-sm="center start"
+      *ngFor="let item of ['1', '2', '3', '4', '5', '6', '7', '8']"
+      class="project"
+    >
+      <h2>
+        {{ 'projects.' + item + '.title' | translate }}
+      </h2>
+      <img
+        [src]="'projects.' + item + '.image_url' | translate"
+        alt=""
+        class="image"
+      >
+      <h4
+        [innerHTML]="'projects.' + item + '.content' | translate"
+      >
+      </h4>
+    </div>
+  </div>
+</section>
+
+<section
+  fxLayout="column"
+  fxLayoutAlign="center start"
+  class="divider"
+  style="background-image: url('assets/images/header_background.jpg')"
+>
+  <h2
+    class="container"
+  >
+    {{ 'dividers.3.title' | translate }}
+  </h2>
+  <p
+    class="container"
+    [innerHTML]="'dividers.3.content' | translate"
+  >
+  </p>
+  <div
+    fxLayout="row"
+    fxLayoutAlign="start start"
+    class="container full-width"
+  >
+    <a
+      mat-raised-button
+      color="main-color"
+      class="link"
+    >
+      {{ 'dividers.3.link_text' | translate }}
+    </a>
+  </div>
+</section>
+
+<div id="contact"></div>
+
+<footer>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign.gt-sm="space-between center"
+    fxLayoutAlign="center center"
+  >
+    <a
+      [href]="'footer.address.link_url' | translate"
+      target="_blank"
+      class="bottom-section"
+    >
+     {{ 'footer.address.text' | translate }}
+    </a>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      class="social"
+    >
+      <a
+        [href]="'social_media.facebook_url' | translate"
+        target="_blank"
+      >
+        <div
+          class="icon-container facebook-icon"
+        >
+        </div>
+      </a>
+      <a
+        [href]="'social_media.instagram_url' | translate"
+        target="_blank"
+      >
+        <div
+          class="icon-container instagram-icon"
+        >
+        </div>
+      </a>
+      <a
+        [href]="'social_media.google_url' | translate"
+        target="_blank"
+      >
+        <div
+          class="icon-container youtube-icon"
+        >
+        </div>
+      </a>
+    </div>
+  </div>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign.gt-sm="space-between center"
+    fxLayoutAlign="center center"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-sm="center start"
+      class="bottom-section"
+    >
+      <a
+        [href]="'mailto:' + ('footer.contact.email' | translate)"
+        target="_blank"
+        class="m-b-15-sm"
+      >
+        E-mail: {{ 'footer.contact.email' | translate }}
+      </a>
+      <a
+        [href]="'tel:' + ('footer.contact.phone' | translate)"
+        target="_blank"
+      >
+        Phone: {{ 'footer.contact.phone' | translate }}
+      </a>
+    </div>
+    <div
+      class="bottom-section centered"
+      [innerHTML]="'footer.credits' | translate"
+    >
+    </div>
+    <div
+      class="bottom-section"
+    >
+    </div>
+  </div>
+</footer>
+
+<a
+  [href]="'tel:' + ('footer.contact.phone' | translate)"
+  target="_blank"
+  class="mobile-phone-contact"
+>
+  <img
+    src="/assets/icons/contact/phone.svg"
+    alt=""
+    class="phone-icon"
+  >
+</a>

@@ -1,0 +1,60 @@
+<div
+  class="menu-wrapper menu-wrapper-animation"
+>
+  <div
+    fxLayout="column"
+    fxLayout.gt-sm="row"
+    fxLayoutAlign="start start"
+    fxLayoutAlign.gt-sm="space-between center"
+    class="menu-container menu-container-animation"
+  >
+    <div
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      class="menu-header menu-header-animation"
+    >
+      <button
+        class="main-menu-burger"
+        fxHide.gt-sm
+        [class.open]="open"
+        (click)="toggleMobileMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div
+      fxLayout="column"
+      fxLayout.gt-sm="row"
+      fxLayoutAlign="start start"
+      fxLayoutAlign.gt-sm="space-between center"
+      class="menu-items-container menu-items-container-animation"
+      [class.open]="open"
+    >
+      <nav
+        fxLayout="column"
+        fxLayout.gt-sm="row"
+        fxLayoutAlign="start start"
+        fxLayoutAlign.gt-sm="end center"
+        class="menu-items-wrapper menu-items-wrapper-animation"
+      >
+        <div
+          *ngFor="let item of links"
+          class="menu-item-wrapper menu-item-wrapper-animation"
+        >
+          <app-menu-item
+            [item]="item"
+            [children]="item.children"
+            [currentRoute]="currentLink"
+            (toggleMobileMenu)="toggleMobileMenu()"
+          >
+          </app-menu-item>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

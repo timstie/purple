@@ -1,0 +1,114 @@
+{
+  "header_info": "It's a small room <br> but there's no ceiling.",
+
+  "services": {
+    "title": "Purple Room Studio offers everything from a full album production to single services including Recording, Mixing, Mastering &amp; Live sound.",
+    "content": "Purple Room Studio is driven by passion and most of all wants to help indie and upcoming bands and musicians bring their music to life",
+    "1": {
+      "title": "Recording",
+      "content": "Everything from full band recording to solo projects",
+      "image_url": "/assets/icons/services/recording.png",
+      "link_url": "/",
+      "link_text": "find out more"
+    },
+    "2": {
+      "title": "Mixing",
+      "content": "Mixing of recorded material full projects or tasks.",
+      "image_url": "/assets/icons/services/mixing.png",
+      "link_url": "/",
+      "link_text": "find out more"
+    },
+    "3": {
+      "title": "Mastering",
+      "content": "Mastering and production of mixed material.",
+      "image_url": "/assets/icons/services/mastering.png",
+      "link_url": "/",
+      "link_text": "find out more"
+    },
+    "4": {
+      "title": "Live Sound",
+      "content": "Live sound engineering for concert and events.",
+      "image_url": "/assets/icons/services/live_sound.png",
+      "link_url": "/",
+      "link_text": "find out more"
+    }
+  },
+
+  "projects": {
+    "title": "Lorem Ipsum is simply dummy. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "1": {
+      "title": "Valmai",
+      "content": "Recording, Mixing, Mastering, Live Sound",
+      "image_url": "/assets/images/albums/album_cover_valmai.jpg"
+    },
+    "2": {
+      "title": "Zaar",
+      "content": "Mixing, Mastering",
+      "image_url": "/assets/images/albums/album_cover_zaar.jpg"
+    },
+    "3": {
+      "title": "Cousin",
+      "content": "Recording",
+      "image_url": "/assets/images/albums/album_cover_cousin.jpg"
+    },
+    "4": {
+      "title": "Eriene",
+      "content": "Recording, Mixing, Mastering",
+      "image_url": "/assets/images/albums/album_cover_eriene.jpg"
+    },
+    "5": {
+      "title": "Moon Loves Honey",
+      "content": "Recording, Mixing",
+      "image_url": "assets/images/albums/album_cover_moon_loves_honey.jpg"
+    },
+    "6": {
+      "title": "The Enormous Sea",
+      "content": "Recording, Mixing, Mastering, Live Sound",
+      "image_url": "/assets/images/albums/album_cover_the_enormous_sea.jpg"
+    },
+    "7": {
+      "title": "Another Album",
+      "content": "Live Sound",
+      "image_url": "/assets/images/albums/album_cover_eriene.jpg"
+    },
+    "8": {
+      "title": "Eriene",
+      "content": "Mixing, Mastering",
+      "image_url": "/assets/images/albums/album_cover_valmai.jpg"
+    }
+  },
+  "dividers": {
+    "1": {
+      "title": "Read this",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    "2": {
+      "title": "Read this",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    "3": {
+      "title": "Read this",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "link_text": "find out more"
+    }
+  },
+
+  "footer": {
+    "address": {
+      "link_url": "https://www.google.com/maps/search/Frejasvej+23+ZZ8230+Aarhus,+Denmark/@56.1527583,10.1758859,16.04z",
+      "text": "Frejasvej 23 ZZ8230 Aarhus, Denmark"
+    },
+    "contact": {
+      "email": "william@soundpalette.dk",
+      "phone": "Call (45) 27 59 45 60"
+    },
+    "credits": "Copyrights © Purple Room Studio. All rights reserved. "
+  },
+
+  "social_media": {
+    "facebook_url": "https://www.facebook.com/PurpleRoomAarhus/",
+    "instagram_url": "https://www.instagram.com/purpleroomstudio/",
+    "google_url": "https://www.youtube.com/"
+  }
+}

@@ -1,0 +1,287 @@
+@import '../styles/vars';
+@import '../styles/mixins';
+
+app-menu-container {
+   ::ng-deep {
+    .logo {
+      height: 50px;
+
+      @include respond('gt-sm') {
+        height: 35px;
+      }
+    }
+
+    .menu-item {
+      @media screen and (max-width: $sm + 73) {
+        margin: 0 9px;
+      }
+
+      @media screen and (max-width: $sm - 1) {
+        margin: 10px 20px;
+      }
+
+      @include respond('gt-sm') {
+        margin: 0 9px;
+      }
+
+      @include respond('gt-md') {
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+.mobile-phone-contact {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: $secondary-color;
+  z-index: 15;
+
+  @include respond('gt-sm') {
+    display: none;
+  }
+
+  .phone-icon {
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.menu-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: $white;
+  transition: height .3s, box-shadow .3s .3s ease-in-out;
+  box-shadow: 0;
+  z-index: 99;
+
+  &.fixed {
+    @include respond('gt-sm') {
+      height: 60px;
+      box-shadow: 0 0 5px 0 $gray;
+    }
+  }
+}
+
+.header-container {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+
+  &::after,
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to top right, $white 49.9%, $black-opaque 50.1%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$black-opaque',GradientType=0 );
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to top left, $white 49.9%, $black-opaque 50.1%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$black-opaque',GradientType=0 );
+  }
+
+  .background {
+    @include bg-cover(cover);
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+  }
+
+  .logo {
+    height: 95px;
+    width: 95px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top .3s, height .3s, width .3s ease-in-out;
+    z-index: 101;
+
+    &.fixed {
+      height: 40px;
+      width: 40px;
+      position: fixed;
+      top: 30px;
+    }
+  }
+
+  .title-container {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .promo {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0 15px;
+    text-align: left;
+    transform: translateX(-50%);
+  }
+}
+
+.divider {
+  @include bg-cover(cover);
+  padding: 50px 15px;
+  background-attachment: fixed;
+
+  @include respond('gt-sm') {
+    height: 50vh;
+    min-height: 500px;
+    padding: 100px 15px;
+    padding-top: 140px;
+  }
+
+  h2,
+  p {
+    width: 100%;
+    color: $white;
+  }
+}
+
+.services-list {
+  .service {
+    width: 100%;
+    position: relative;
+    text-align: left;
+
+    @include respond('gt-xs') {
+      width: 45%;
+      height: 540px;
+    }
+
+    @include respond('gt-sm') {
+      width: 23%;
+      height: 500px;
+    }
+  }
+
+  .image {
+    width: 75%;
+  }
+
+  .title {
+    margin: 15px 0;
+  }
+
+  .link {
+    @include respond('gt-sm') {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.portfolio {
+  .project {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include respond('gt-xs') {
+      width: 45%;
+    }
+  }
+
+  .image {
+    width: 85%;
+    margin: 15px 0;
+  }
+}
+
+.social {
+  a {
+    margin: 5px;
+  }
+
+  .icon-container {
+    @include bg-cover(cover);
+    width: 40px;
+    height: 40px;
+  }
+
+  .facebook-icon {
+    background-image: url('/assets/icons/social/main/facebook.svg');
+  }
+
+  .google-icon {
+    background-image: url('/assets/icons/social/main/google.svg');
+  }
+
+  .instagram-icon {
+    background-image: url('/assets/icons/social/main/instagram.svg');
+  }
+
+  .pinterest-icon {
+    background-image: url('/assets/icons/social/main/pinterest.svg');
+  }
+
+  .youtube-icon {
+    background-image: url('/assets/icons/social/main/youtube.svg');
+  }
+}
+
+footer {
+  padding: 15px;
+
+  @include respond('gt-sm') {
+    padding-top: 60px;
+  }
+
+  .bottom-section {
+    width: 100%;
+
+    @media screen and (max-width: $sm - 1) {
+      text-align: center;
+      margin: 7.5px 0;
+    }
+
+    @include respond('gt-sm') {
+      width: 32%;
+    }
+  }
+}
+
+.services-container {
+  @include respond('gt-sm') {
+    height: 100vh;
+    min-height: 800px;
+  }
+}
+
+.m-b-15-sm {
+  @media screen and (max-width: $sm - 1) {
+    margin-bottom: 15px;
+  }
+}

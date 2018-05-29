@@ -1,0 +1,42 @@
+<a
+  appClickStopPropagation
+  (click)="toggleMenu(); onMenuItemClick(item.text)"
+  fxLayout="column"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.gt-sm="center center"
+  class="menu-item menu-item-animation"
+  [ngClass]="{
+    'parent-menu-item': children.length > 0,
+    'parent-menu-item-animation': children.length > 0,
+    'active': isItemLinkActive(item, children)
+  }"
+>
+  <div
+    class="menu-item-text menu-item-text-animation"
+  >
+    <span
+      [ngClass]="{'parent-menu-item-text-wrapper': children.length > 0}"
+    >
+      {{ item.text }}
+    </span>
+    <div
+      *ngIf="children.length > 0"
+      class="child-menu child-menu-animation"
+      [ngClass]="{open: isOpen}"
+    >
+      <a
+        *ngFor="let item of children"
+        class="child-menu-item child-menu-item-animation"
+        [ngClass]="{'active': isItemLinkActive(item, [])}"
+        appClickStopPropagation
+        (click)="toggleMenu()"
+      >
+        <div
+          class="child-menu-text child-menu-text-animation"
+        >
+          {{ item.text }}
+        </div>
+      </a>
+    </div>
+  </div>
+</a>
